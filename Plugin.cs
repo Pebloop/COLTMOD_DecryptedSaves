@@ -25,7 +25,7 @@ namespace DecryptedSaves
         public static void PreventEncryption(SaveAndLoad __instance)
         {
             COTLDataReadWriter<DataManager> _saveFileReadWriter = Traverse.Create(Singleton<SaveAndLoad>.Instance).Field("_saveFileReadWriter").GetValue() as COTLDataReadWriter<DataManager>;
-            _saveFileReadWriter.Write(DataManager.Instance, SaveAndLoad.MakeSaveSlot(SaveAndLoad.SAVE_SLOT), false, true);
+            _saveFileReadWriter.Write(DataManager.Instance, SaveAndLoad.MakeSaveSlot(SaveAndLoad.SAVE_SLOT), false);
         }
 
     }
